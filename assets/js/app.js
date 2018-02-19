@@ -1,26 +1,21 @@
 $(function() {
   var socket = io('http://34.227.11.223:3000');
 
-  var messageForm = $('#sendMessage');
-  var message = $('#message');
-  var chat = $('#chat');
-
   
-  var nickname = $('#nickname');
-  var setNick = $('#setNick');
-  var users = $('#users');
-
-
   $('form').submit(function() {
     socket.emit('chat message', $('#message').val());
     $('#message').val('');
     return false;
   });
   socket.on('chat message', function(msg) {
-    $('#chat').append($('<li>').text(msg));
-    window.scrollTo(0, document.body.scrollHeight);
+    var user = $('#user').val();
+    var msj = $('#message').val();
+    $('#chat').append/*($('<li>').text(msg));*/('<li>' + user + ' - ' + msg + '</li>');
+    //window.scrollTo(0, document.body.scrollHeight);
   });
 });
+
+
 
 /*
 

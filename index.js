@@ -8,17 +8,18 @@ app.get('/', function(req, res) {
 });
 
 io.on('connection', function (socket) {
+  console.log('usuario id:%s', socket.id);
   var addedUser = false;
 
   socket.on('chat message', function(msg) {
-    io.emit('chat message', msg);
+    var payload = {
+      author: document.getElementById(nickname).value
+    }
+    io.emit('chat message', payload + msg);
   });
-  
+
 
 http.listen(port, function() {
   console.log('listening on *:' + port);
 });
 });
-/*
-
-

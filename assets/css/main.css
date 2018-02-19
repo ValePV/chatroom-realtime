@@ -22,9 +22,13 @@ h1{
   list-style-type: none;
   margin:10px;
 }
-#controls{
+/*#controls{
   bottom: 0px;
-}
+  border: 1px solid #3E4261;
+  border-radius: 5%;
+  background-color: #3E4261;
+  padding-top: 10px;
+}*/
 .panel{
   overflow-y: scroll;
   height: 350px;
@@ -41,6 +45,30 @@ h1{
   text-align: center;
   
 }
+.cont-controls{
+  padding: 0;
+  border-radius: 4px;
+  border: 1px solid #3e4261;
+  background-color: #3e4261;
+}
+#sendMessage{
+  width: 778px;
+  padding: 5px;
+}
+#user{
+  width: 180px;
+  
+}
+#message{
+  width: 468px;
+  margin: 0;
+}
+.but{
+  width: 120px;
+}
+.input-group-btn{
+  width: 70;
+}
 
 #users{
   list-style-type: none;
@@ -51,4 +79,11 @@ h1{
 }
 #nickContainer{
   margin-top: 160px;
+}
+.double-input .form-control {
+    width: 50%;
+    border-right-width: 0px;
+}
+.double-input .form-control:focus {
+    border-right-width: 1px;
 }

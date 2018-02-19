@@ -21,10 +21,10 @@
   </header>
   <div class="row" style="display:none;">
     <div class="col-md-4 col-md-offset-4">
-      <div class="input-group" id="nickContainer">
+      <div class="input-group" id="nickContainer" >
         <input type="text" class="form-control" id="nickname" placeholder="Ingrese su Nombre de Usuario">
         <span class="input-group-btn">
-          <button class="btn btn-default" id="setNick" type="button" >Go!</button>
+          <button class="btn btn-default" id="setNick" type="button" onclick = "setUsername()" >Go!</button>
         </span>
       </div><!-- /input-group -->
       <div class="alert fade in alert-danger alert-dismissable" data-dismiss="alert" id="login-error" style="display:none;" >
@@ -35,7 +35,7 @@
   </div>
   <div class="container" id="cont-chat">
     <div class="row">
-      <div class="col-md-8 col-md-offset-1 select">
+      <div class="col-md-8 col-md-offset-2 select">
         <select name="" id="" class="form-control" >
           <option value="chan-a">Channel A</option>
           <option value="chan-b">Channel B</option>
@@ -43,12 +43,12 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8 col-md-offset-1 panel">
+      <div class="col-md-8 col-md-offset-2 panel">
         <ul id="chat">
           
         </ul>
       </div>
-      <div class="col-md-2 cont-userss panel-primary">
+      <div class="col-md-2 cont-userss panel-primary" style="display:none;">
         <div class="panel-heading nicks">Users</div>
         <ul id="users" class="panel-body">
           
@@ -56,19 +56,24 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-8 col-md-offset-1">
-        <div id="controls">
+      <div class="col-md-8 col-md-offset-2 cont-controls">
+        <div id="controls" >
           <form action="" class="input-group" id="sendMessage">
-            <input class="form-control" type="text" id="message" placeholder="Escribe tu mensaje...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit" value="Enviar">Enviar</button>
-            </span>
+            <div class="input-group double-input">
+              <input id="user" type="text" placeholder="NickName" class="form-control" />
+              <input id="message" type="text" placeholder="Escribe tu mensaje..." class="form-control" />
+              <span class="input-group-btn">
+                <button class="btn btn-default but" type="submit" value="Enviar">Enviar</button>
+              </span>
+            </div><!-- /input-group -->
           </form>
         </div>
       </div>
     </div>
   </div>
-    
+
+
+
 
 
 
