@@ -10,7 +10,9 @@ $(function() {
   socket.on('chat message', function(msg) {
     var user = $('#user').val();
     var msj = $('#message').val();
-    $('#chat').append/*($('<li>').text(msg));*/('<li>' + user + ' - ' + msg + '</li>');
+    $('#chat').append/*($('<li>').text(msg));*/('<li>' + user 
+      + ' <span class="glyphicon glyphicon-console" aria-hidden="true"></span> ' 
+      + msg + '</li>');
     //window.scrollTo(0, document.body.scrollHeight);
   });
 });
