@@ -5,14 +5,15 @@ $(function() {
   $('form').submit(function() {
     socket.emit('chat message', $('#message').val());
     $('#message').val('');
-    return false;
+        return false;
   });
   socket.on('chat message', function(msg) {
     var user = $('#user').val();
-    var msj = $('#message').val();
+    var msj = $('.mess').val();
     $('#chat').append/*($('<li>').text(msg));*/('<li>' + user 
       + ' <span class="glyphicon glyphicon-console" aria-hidden="true"></span> ' 
       + msg + '</li>');
+    $('#user').val('');
     //window.scrollTo(0, document.body.scrollHeight);
   });
 });
